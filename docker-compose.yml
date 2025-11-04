@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - auraldine-network
+
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ml_service
+    networks:
+      - auraldine-network
+
+  ml_service:
+    build: ./ml_service
+    ports:
+      - "5000:5000"
+    networks:
+      - auraldine-network
+
+networks:
+  auraldine-network:
+    driver: bridge
