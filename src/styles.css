@@ -1,0 +1,45 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #0066cc;
+  --muted: #666;
+}
+
+body, html, #root{ height:100%; }
+body{
+  margin:0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#222;
+}
+.app-root{
+  max-width:960px;
+  margin:28px auto;
+  padding:18px;
+}
+header h1{ margin:0; }
+.sub{ color:var(--muted); margin-top:6px }
+
+.controls{ margin-top:18px }
+.control-row{ display:flex; gap:10px; align-items:center; margin-bottom:12px }
+.control-row label{ font-weight:600 }
+
+.recorder .rec-controls{ display:flex; gap:10px; align-items:center }
+button{ padding:8px 12px; border-radius:6px; border:1px solid rgba(0,0,0,0.08); background:linear-gradient(#fff,#f3f6fb); cursor:pointer }
+button.primary{ background:var(--accent); color:#fff; border:none }
+button.danger{ background:#ff5c5c; color:#fff; border:none }
+button.info{ background:#eee; border:none; width:32px; height:32px; border-radius:6px }
+button.send{ background:#1d8f1d; color:white }
+
+.card{ background:var(--card); padding:14px; border-radius:10px; box-shadow:0 4px 20px rgba(12,20,40,0.05) }
+.results-card h2{ margin-top:0 }
+.scores{ list-style:none; padding-left:0 }
+.scores li{ padding:4px 0 }
+.cuisines{ display:flex; gap:10px; margin-top:8px }
+.dish{ background:#fafafa; padding:10px; border-radius:8px; width:180px }
+.dish-name{ font-weight:700 }
+.dish-desc{ color:var(--muted); font-size:13px }
+
+.preview audio{ width:100%; margin-top:8px }
+
+footer{ margin-top:18px; color:var(--muted) }
